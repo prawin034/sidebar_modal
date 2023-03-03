@@ -1,0 +1,32 @@
+@mixin respond($BREAKPOINT) {
+  @if $BREAKPOINT == TAB {
+    @media only screen and (min-width: 112em) {
+      @content;
+    }
+  }
+  @if $BREAKPOINT == LAPTOP {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $BREAKPOINT == MINI {
+    @media only screen and (max-width: 65em) {
+      @content;
+    }
+  }
+  @if $BREAKPOINT == BIG-PHONE {
+    @media only screen and (max-width: 54em) {
+      @content;
+    }
+  }
+  @if $BREAKPOINT == PHONE {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $BREAKPOINT == MINI-PHONE {
+    @media only screen and (max-width: 17.5em) {
+      @content;
+    }
+  }
+}
